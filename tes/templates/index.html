@@ -1,0 +1,79 @@
+{% load static %}
+<html>
+<head>
+<title>User</title>
+
+<meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style>
+
+
+body{ font: 14px sans-serif; text-align: center;
+       background: url("{% static 'use8.jpg' %}") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+
+
+</style>
+
+<link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+
+    <div class="page-header">
+        <font size="9" color="#0066ff">
+            360
+        </font>
+    </div>
+
+    <h3>Your feedback matters!!!</h3>
+
+    <br style="line-height: 9;">
+
+    <font size="4" color="#0066ff">
+        </font>
+    {% if user.is_authenticated %}
+    <h1>Hi {{user.username}},  Welcome to 360.</h1>
+     <div><a href="account/logout" class="btn btn-primary">Log out</a></div><br>
+{% else %}
+        <div><a href="account/register" class="btn btn-primary">Sign up</a></div><br>
+       <div> <a href="account/login" class="btn btn-primary">Login</a></div><br>
+{% endif %}
+</body>
+</html>

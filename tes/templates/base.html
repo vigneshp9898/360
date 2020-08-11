@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>User</title>
+
+<meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+
+
+body{ font: 14px sans-serif; text-align: center;
+      background: url(use8.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+</style>
+
+<link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+
+    <div class="page-header">
+        <font size="9" color="#0066ff">
+            360
+        </font>
+    </div>
+    {% block content %}
+    <h3>Your feedback matters!!!</h3>
+{% endblock %}
+    <br style="line-height: 9;">
+
+    <font size="4" color="#0066ff">
+        <div>Choose an user account:</div></font>
+        <div><a href="loginmen.php" class="btn btn-primary">Mentor</a></div><br>
+        <a href="loginman.php" class="btn btn-primary">Manager</a>
+</body>
+</html>

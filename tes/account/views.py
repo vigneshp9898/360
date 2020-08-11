@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
+#testing
 
 def login(request):
     if request.method == 'POST':

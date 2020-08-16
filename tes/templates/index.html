@@ -70,10 +70,10 @@ body{ font: 14px sans-serif; text-align: center;
         </font>
     {% if user.is_authenticated %}
     <h1>Hi {{user.username}},  Welcome to 360.</h1>
-     <div><a href="account/logout" class="btn btn-primary">Log out</a></div><br>
+     <div><a href="accounts/logout" class="btn btn-primary">Log out</a></div><br>
 {% else %}
-        <div><a href="account/register" class="btn btn-primary">Sign up</a></div><br>
-       <div> <a href="account/login" class="btn btn-primary">Login</a></div><br>
+        <div><a href="accounts/register" class="btn btn-primary">Sign up</a></div><br>
+       <div> <a href="accounts/login" class="btn btn-primary">Login</a></div><br>
 {% endif %}
 </body>
 </html>
